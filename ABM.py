@@ -1,3 +1,4 @@
+#! /usr/bin/env python
 import random as rn
 
 import matplotlib.pyplot as plt
