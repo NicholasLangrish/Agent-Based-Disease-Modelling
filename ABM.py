@@ -94,7 +94,7 @@ class Agent():
                     else:
                         self.status="I"
                 elif self.status=="H":
-                    if rn.randint(1,death_calculator)<=3:
+                    if rn.randint(1,death_calculator)<=2:
                         self.status="D"
                     else:
                         self.status="R"
@@ -328,7 +328,7 @@ num_workplaces = 125
 num_schools = 50
 infection_multiplier_range = [1, 3]
 hospitalisation_calculator = 250 #Generates a random number every hour inbetween this and 0, and if age is larger than this, the person is hospitalised
-death_calculator = 10 #1 in n people will die when hospitalised
+death_calculator = 10 #2 in n people will die when hospitalised
 
 #Time spent in each stage (upper and lower bounds in hours)
 time_E = [24, 72]
