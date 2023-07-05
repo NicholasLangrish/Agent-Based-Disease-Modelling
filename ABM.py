@@ -303,6 +303,7 @@ total_infected_per_location = []
 
 days = 0
 time = 0
+lockdown = False
 
 suscpetible = []
 exposed = []
@@ -334,7 +335,6 @@ time_I = [72, 168]
 time_R = [672, 1008]
 
 #Lockdown settings
-lockdown = False
 lockdown_days = [1, 15]
 
 #New wave settings
