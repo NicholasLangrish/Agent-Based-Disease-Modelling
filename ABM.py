@@ -319,7 +319,7 @@ school_edges = []
 #Parameters that the user can change:
 
 #Standard settings
-num_days = 1000
+num_days = 100
 num_agents = 2500
 infection_chance = 2
 start_statuses = [0.99, 0.01, 0, 0] #Decimal values representing the proportion of people at stages S,E,I,R at the start of the simulation
