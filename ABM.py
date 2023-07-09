@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 import random as rn
+import sys
 
 import matplotlib.pyplot as plt
 import networkx as nx
@@ -126,7 +127,10 @@ def passTime():
         if time==24:
             time=0
             days+=1
-            print(days)
+            progress = days / num_days
+            sys.stdout.write('\r')
+            sys.stdout.write(f"[{'=' * int(50*progress):{50}s}] {int(100 * progress)}% {'Simulating'}")
+            sys.stdout.flush()
             if lockdown_days[0]==days: 
                 lockdown=True
             if lockdown_days[1]==days: 
@@ -211,6 +215,7 @@ def setupAgents(start_statuses,num_homes,num_works, time_e, time_i, time_r, mult
 
     passTime()
     graphFigures()
+    sys.stdout.write('\n')
 
 #Creates and outputs a visual statistical data representation consisting of a line graph and node network
 def graphFigures():
